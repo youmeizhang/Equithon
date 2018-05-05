@@ -1,6 +1,3 @@
-{% extends "navbar.html" %}
-
-{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +27,7 @@
         //background-color: rgba(4498,3487,9976,0.5);
         height: 100%;
         width: 100%;
-        background-image: url('../public/images/study.jpg');
+        background-image: url("/static/images/study.jpg");
         //opacity: 0.5;
         background-repeat: no-repeat;
         background-size:     cover;
@@ -46,7 +43,7 @@
 
     <div class="card card-container main-center" style="width: 350px;">
         <img id="profile-img" class="profile-img-card " style="width: 60%; height:50%;
-    margin: 20px 50px;" src="../public/images/avatar2.png" />
+    margin: 20px 50px;" src="static/images/avatar2.png" />
         <p id="profile-name" class="profile-name-card"></p>
         <form class="form-signin">
             <span id="reauth-email" class="reauth-email"></span>
@@ -66,4 +63,3 @@
 </div>
 </body>
 </html>
-{% endblock %}

@@ -21,7 +21,7 @@ def index():
     return render_template('index.html', title='Home')
 
 
-@app.route('/login', methods = ['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
@@ -31,7 +31,7 @@ def login():
     return render_template('login.html', title='Login')
 
 
-@app.route('/signup', methods = ['GET', 'POST'])
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
     form = SignupForm()
     if form.validate_on_submit():
