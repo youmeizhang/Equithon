@@ -6,29 +6,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Log in</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <style>
     .main-center{
-        margin-top: 30px;
-        margin: 0 auto;
+        margin: 80px auto;
         max-width: 330px;
         padding: 40px 40px;
-
+        background: indianred;
+        opacity: 0.9;
+    }
+    .main-outer {
+        //background-color: rgba(4498,3487,9976,0.5);
+        height: 100%;
+        width: 100%;
+        background-image: url('../public/images/study.jpg');
+        //opacity: 0.5;
+        background-repeat: no-repeat;
+        background-size:     cover;
+        background-position: center center;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+    }
+    .forget-password-css{
+        color: black;
     }
 </style>
-<div class="container">
+<div class="container main-outer">
+
     <div class="card card-container main-center" style="width: 350px;">
-        <img id="profile-img" class="profile-img-card " style="width: 50%; height:50%;" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <img id="profile-img" class="profile-img-card " style="width: 60%; height:50%;
+    margin: 20px 50px;" src="../public/images/avatar2.png" />
         <p id="profile-name" class="profile-name-card"></p>
         <form class="form-signin">
             <span id="reauth-email" class="reauth-email"></span>
             <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
+            <p></p>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <div id="remember" class="checkbox">
                 <label>
@@ -37,7 +60,7 @@
             </div>
             <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign In</button>
         </form>
-        <a href="#" class="forget-password">Forget the password?</a>
+        <a href="#" class="forget-password forget-password-css">Forgot the password?</a>
     </div>
 
 </div>
