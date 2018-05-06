@@ -11,20 +11,17 @@ class LoginForm(FlaskForm):
 
 
 class SignupForm(FlaskForm):
-        first_name = StringField('Your Name', validators=[DataRequired()])
-        last_name = StringField('Your Name', validators=[DataRequired()])
+        full_name = StringField('Your Name', validators=[DataRequired()])
         email = StringField('Email', validators=[DataRequired()])
         password = PasswordField('Password', validators=[DataRequired()])
         submit = SubmitField('Sign Up')
 
 
 class ProfileForm(FlaskForm):
-        school = StringField('Your Name', validators=[DataRequired()])
+        school = StringField('School', validators=[DataRequired()])
         grade = StringField('Grade', validators=[DataRequired()])
-        age = StringField('Age', validators=[DataRequired()])
+        age = IntegerField('Age', validators=[DataRequired()])
         phone = IntegerField('Phone Number (optional)')
         address = StringField('Address (optional)')
-        subjects = SelectField('Subjects', validators=[DataRequired()])
-        avail_days = SelectField('Available Days of the Week', validators=[DataRequired()])
         blurb = StringField('Tell Us About Yourself! (optional)')
         submit = SubmitField('Submit')

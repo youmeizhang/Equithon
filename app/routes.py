@@ -10,6 +10,7 @@ from app.forms import ProfileForm
 def index():
     user = {'username': 'Lindsey'}
     posts = [
+        #sample code
         {
             'author': {'username': 'John'},
             'body': 'Beautiful day in Portland!'
@@ -26,9 +27,10 @@ def index():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
+        flash('You were successfully logged in')
         flash('Login requested for user {}, remember_me={}'.format(
-            form.username.data, form.remember_me.data))
-        return redirect('/index')
+            form.email.data, form.remember_me.data))
+        return redirect('/userpage')
     return render_template('login.html', title='Login', form=form)
 
 
@@ -36,8 +38,8 @@ def login():
 def signup():
     form = SignupForm()
     if form.validate_on_submit():
-        flash('Login requested for user {}, remember_me={}'.format(
-            form.username.data, form.remember_me.data))
+        flash('Signup requested for user {}, remember_me={}'.format(
+            form.full_name.data, form.email.data))
         return redirect('/profile')
     return render_template('signup.html', title='Signup', form=form)
 
@@ -46,7 +48,11 @@ def signup():
 def profile():
     form = ProfileForm()
     if form.validate_on_submit():
-        flash('This works gr8')
-        return redirect('/index')
+        return redirect('/userpage')
     return render_template('profile.html', title='Profile', form=form)
+
+
+@app.route('/userpage')
+def userpage():
+    return render_template('userpage.html')
 
