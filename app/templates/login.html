@@ -1,8 +1,11 @@
+
+{% extends "navbar.html" %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Log in</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -45,21 +48,23 @@
         <img id="profile-img" class="profile-img-card " style="width: 60%; height:50%;
     margin: 20px 50px;" src="static/images/avatar2.png" />
         <p id="profile-name" class="profile-name-card"></p>
-        <form class="form-signin">
+
+        <form class="form-signin" action="" method="POST">
+             {{ form.hidden_tag() }}
             <span id="reauth-email" class="reauth-email"></span>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
+            {{ form.username(class="form-control",id="email",required="required",type="email",value="",placeholder="Enter email") }}
             <p></p>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <div id="remember" class="checkbox">
+            {{ form.password(class="form-control",id= "password", required="required", type="password",value="",placeholder="Password") }}
+            <div class="checkbox">
                 <label>
-                    <input type="checkbox" value="remember-me">Remember Me
+                    {{ form.remember_me(id="remember_me", type="checkbox", value="remember-me") }} Remember Me
                 </label>
             </div>
             <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign In</button>
         </form>
         <a href="#" class="forget-password forget-password-css">Forgot the password?</a>
     </div>
-
 </div>
 </body>
 </html>
+{% endblock %}

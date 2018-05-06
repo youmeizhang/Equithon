@@ -28,7 +28,7 @@ def login():
         flash('Login requested for user {}, remember_me={}'.format(
             form.username.data, form.remember_me.data))
         return redirect('/index')
-    return render_template('login.html', title='Login')
+    return render_template('login.html', title='Login', form=form)
 
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -38,5 +38,5 @@ def signup():
         flash('Login requested for user {}, remember_me={}'.format(
             form.username.data, form.remember_me.data))
         return redirect('/index')
-    return render_template('login.html', title='Login')
+    return render_template('signup.html', title='Signup', form=form)
 
