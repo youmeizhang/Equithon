@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <title>Tutor Connect</title>
+</head>
+
+<style>
+    .row.content {height: 1500px}
+    .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
+    }
+    
+    h4 {
+        color: #a1a1a1;
+        font-size: 19px;
+    }
+
+    h3 {
+        font-size: 23px;
+        line-height: 1.375em;
+        color: #303030;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+        .row.content {height: auto;}
+    }
+
+    .main-outer {
+    //background-color: rgba(4498,3487,9976,0.5);
+        height: 100%;
+        width: 100%;
+        background-image: url('../public/images/study.jpg');
+    //opacity: 0.5;
+        background-repeat: no-repeat;
+        background-size:     cover;
+        background-position: center center;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+    }
+    .forget-password-css{
+        color: black;
+    }
+
+</style>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="container main-outer">
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="container-fliud">
+        <div class="navbar-header">
+            <!-- <button type="button" class="narbar-toggle collapsed" data-toggle="collapse" data-target="example1-navbar-collapse-1">
+                <span class="sr-only">Toggle naviagtion</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button> -->
+            <a class="navbar-brand" href="#">Welcome to Tutor Connect</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="examples1-navbar-collapse-2">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Home Page</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find Tutors<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="userpage.html">Make a Post</a></li>
+                        <li><a href="tutorfile.html">Search Tutors</a></li>
+                        <li><a href="#">More</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="signup.html">Sign Up</a>
+                </li>
+                <li>
+                    <a href="login.html">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="homePage" data-spy="scroll" data-target=".navbar" data-offset="60" style="opacity: 0.8;">
+<div class="jumbotron text-center" style="background-color: #ffffff; color: #000000;">
+    <h1>Get Help From Talent</h1>
+
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <h4 class="color: #ffffff">Live as if you were to die tomorrow. Learn as if you were to live forever<br><span>-- Mahatma Gandhi</span></h4>
+            </div>
+            <div class="item">
+                <h4>Any fool can know. The point is to understand<br><span>-- Albert Einstein</span></h4>
+            </div>
+            <div class="item">
+                <h4>It is not that I'm so smart. But I stay with the questions much longer<br><span>-- Albert Einstein</span></h4>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+</div>
+
+<div class="container-fluid" style="opacity: 0.8; background-image: url('../public/images/study.jpg');">
+    <div class="row content">
+        <div class="col-sm-3 sidenav" style="opacity: 0.8; background-image: url('../public/images/study.jpg');">
+            <img src="../public/images/xiaoming.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            <h3>Henrry</h3>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#section1">Home</a></li>
+                <li><a href="section2">My tutors</a></li>
+                <li><a href="section2">My subjects</a></li>
+                <li><a href="section2">My posts</a></li>
+                <li><a href="section2">My credits</a></li>
+            </ul>
+        </div>
+
+
+        <div class="col-sm-9" ng-app="myApp" ng-controller="myCtrl">
+            <h3>Post Something</h3>
+            <div class="">
+                <div class="col-sm-4">
+                    <label>Subject</label>
+                    <input ng-model="subject" class="form-control biginputbarinline preview" type="text" name="subject" rows="3" id="subject" data-copy="#subject"></input>
+                </div>
+                <div class="col-sm-4">
+                    <label>Location</label>
+                    <input ng-model="location" class="form-control biginputbarinline preview" type="text" name="location" rows="3" id="location" data-copy="#location"></>
+                </div>
+                <div class="col-sm-4">
+                    <label>Price</label>
+                    <input ng-model="price" class="form-control biginputbarinline preview" type="text" name="price" rows="3" id="price" data-copy="#price"></input>
+                </div>
+
+                <form role="form">
+                    <div class="col-sm-4">
+                        <label>Title</label>
+                        <input ng-model="titleofpost" class="form-control biginputbarinline preview" type="text" name="titleofpost" rows="3" required id="titleofpost" data-copy="#titleofpost"></input>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <label>Content</label>
+                        <input ng-model="post" class="form-control biginputbarinline preview" type="text" name="fullpost" rows="3" required id="fullpost" data-copy="#fullpost"></input>
+                    </div>
+                    <div class="col-sm-4">
+                        <label>Submit</label>
+                        <br>
+                        <input type="checkbox" ng-model="myPost">Click me! You are alomost done
+                    </div>
+                    <!-- <button type="submit" class="btn btn-success" ng-click="myPost">Submit</button> -->
+                </form>
+        </div>
+
+
+
+    <div>
+        <h4><small>Start Journey</small></h4>
+        <hr>
+            <div ng-show="myPost">
+                <div class="jumbotron" style="background-color: #ffffff; color: #000000; opacity: 0.95;">
+                <h3>{{titleofpost}}</h3>
+                <h4>{{post}}</h4>
+                <h5><span class="glyphicon glyphicon-time"></span>Post by Henrry, May 5, 2018.</h5>
+                <h5>Categories: <span class="label label-success">{{subject}}</span><span class="label label-success">{{location}}</span><span class="label label-success">${{price}} / hour</span></h5>
+                <p><div class="preview" id="name"></div></p>
+                <div>
+                    <a href="#"><i class="fa fa-thumbs-up"></i></a>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                    <a href="#"><i class="fa fa-comments"></i></a>
+                    <a href="#"><i class="fa fa-reply"></i></a>
+                </div>
+                </div>
+            </div>
+
+<!-- ng-click= ng-hide=-->
+        <!-- <div id="homePage" data-spy="scroll" data-target=".navbar" data-offset="60" style="opacity: 0.8;"> -->
+        <div class="jumbotron" style="background-color: #ffffff; color: #000000; opacity: 0.95;">
+                <h3>Looking for a Math Tutor in Waterloo</h3>
+                <h4>Hi, I am looking for a Math Tutor for this coming Summer. I live in Waterloo and I wish that the tutor is a UWaterloo student.
+                The paid price is $15 per hour. Please contact me if you are interested in.</h4>
+                <h5><span class="glyphicon glyphicon-time"></span>Post by Henrry, May 5, 2018.</h5>
+                <h5>Categories: <span class="label label-success">Math</span><span class="label label-success">Waterloo</span><span class="label label-success">$15 / hour</span></h5>
+                <p><span class="badge">2</span>Comments</p>
+    <!-- </div> -->
+            <script>
+                $(document).ready(function() {
+                    $(".preview").on('keyup', function() {
+                        $($(this).data('copy')).html($(this).val());
+                    });
+                });
+            </script>
+
+            <!-- angular script -->
+            <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function($scope) {
+                    $scope.titleofpost = "";
+                    $scope.post = "";
+                    $scope.subject = "";
+                    $scope.location = "";
+                    $scope.price = "";
+                });
+            </script>
+
+        <div class="row">
+            <div class="col-sm-2 text-center">
+                <img src="../public/images/david.png" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-sm-10">
+                <h4>David<small>May 5, 2018, 5:51 PM</small></h4>
+                <p>Hey, I am a second year student majoring in Math in UWaterloo. I would like to be your tutor. How many hours per week do you
+                want to have the tutorial? I am pretty free this Summer and would like to do something meaningful.</p>
+                <div>
+                    <a href="#"><i class="fa fa-thumbs-up"></i></a>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                    <a href="#"><i class="fa fa-comments"></i></a>
+                    <a href="#"><i class="fa fa-reply"></i></a>
+                </div>
+            </div>
+
+            <div class="col-sm-2 text-center">
+                <img src="../public/images/sera.png" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-sm-10">
+                <h4>Sera<small>May 5, 2018, 6:00 PM</small></h4>
+                <p>Hey, I am Sera. Can I ask what year are you in? Are you a high school student?</p>
+                <div>
+                    <a href="#"><i class="fa fa-thumbs-up"></i></a>
+                    <a href="#"><i class="fa fa-heart"></i></a>
+                    <a href="#"><i class="fa fa-comments"></i></a>
+                    <a href="#"><i class="fa fa-reply"></i></a>
+                </div>
+                <p>
+                    <span class="badge">1</span>Comment:
+                </p><br>
+                <div class="row">
+                    <div class="col-sm-2 text-center">
+                        <img src="../public/images/xiaoming.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                    </div>
+                    <div class="col-xs-10">
+                        <h4>Henrry<small>May 5, 2018, 6:10 PM</small></h4>
+                        <p>Hi Sera, yes, I am in my first year in high school.</p>
+                        <div>
+                            <a href="#"><i class="fa fa-thumbs-up"></i></a>
+                            <a href="#"><i class="fa fa-heart"></i></a>
+                            <a href="#"><i class="fa fa-comments"></i></a>
+                            <a href="#"><i class="fa fa-reply"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+</div>
+</div>
+
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
