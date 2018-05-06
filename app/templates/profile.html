@@ -61,7 +61,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" id="school" placeholder="Enter your current school")/>
+                                {{ form.school (type="text", class="form-control", id="school", placeholder="Enter your current school") }}
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" id="school" placeholder="Grade")/>
+                                {{form.grade(type="text", class="form-control", id="school", placeholder="Grade")}}
                             </div>
                         </div>
                        </div>
@@ -80,7 +80,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" id="school" placeholder="Age")/>
+                                {{form.age(type="text", class="form-control", id="school", placeholder="Age") }}
                             </div>
                         </div>
                        </div>
@@ -91,7 +91,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" id="school" placeholder="Enter your phone number (optional)")/>
+                                {{ form.phone(type="text", class="form-control", id="school", placeholder="Enter your phone number (optional)") }}
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" id="school" placeholder="Enter your current address (optional)")/>
+                                {{form.address(type="text", class="form-control", id="school", placeholder="Enter your current address (optional)") }}
                             </div>
                         </div>
                     </div>
@@ -187,7 +187,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" id="school" placeholder="Additional Information")/>
+                                {{ form.blurb(type="text", class="form-control", id="school", placeholder="Additional Information (optional)")}}
                             </div>
                         </div>
                     </div>
