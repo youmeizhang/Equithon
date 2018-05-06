@@ -52,7 +52,7 @@
         <form class="form-signin" action="" method="POST">
              {{ form.hidden_tag() }}
             <span id="reauth-email" class="reauth-email"></span>
-            {{ form.username(class="form-control",id="email",required="required",type="email",value="",placeholder="Enter email") }}
+            {{ form.email(class="form-control",id="email",required="required",type="email",value="",placeholder="Enter email") }}
             <p></p>
             {{ form.password(class="form-control",id= "password", required="required", type="password",value="",placeholder="Password") }}
             <div class="checkbox">
@@ -60,7 +60,7 @@
                     {{ form.remember_me(id="remember_me", type="checkbox", value="remember-me") }} Remember Me
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign In</button>
+            {{ form.submit(class="btn btn-lg btn-primary btn-block btn-signin", type="submit", role="button") }}
         </form>
         <a href="#" class="forget-password forget-password-css">Forgot the password?</a>
     </div>
