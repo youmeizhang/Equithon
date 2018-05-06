@@ -1,68 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Tutor Connect</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <nav class="navbar navbar-default navbar-inverse" role="navigation">
-        <div class="container-fliud">
-            <div class="navbar-header">
-                <!-- <button type="button" class="narbar-toggle collapsed" data-toggle="collapse" data-target="example1-navbar-collapse-1">
-                    <span class="sr-only">Toggle naviagtion</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button> -->
-                <a class="navbar-brand" href="#">Welcome to Tutor Connect</a>
-            </div>
+    <title>Tutor Connect</title>
+</head>
 
-            <div class="collapse navbar-collapse" id="examples1-navbar-collapse-2">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">Home Page</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find Tutors<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="userpage.html">Make a Post</a></li>
-                            <li><a href="tutorfile.html">Search Tutors</a></li>
-                            <li><a href="#">More</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </li>
-                </ul>
+<style>
+    .row.content {height: 1500px}
+    .sidenav {
+        background-color: #f1f1f1;
+        height: 100%;
+    }
 
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+    h4 {
+        color: #a1a1a1;
+        font-size: 19px;
+    }
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="signup.html">Sign Up</a>
-                    </li>
-                    <li>
-                        <a href="login.html">Log In</a>
-                    </li>
-                </ul>
-            </div>
+    h3 {
+        font-size: 23px;
+        line-height: 1.375em;
+        color: #303030;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        background-color: #555;
+        color: white;
+        padding: 15px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+        .row.content {height: auto;}
+    }
+
+    .main-outer {
+    //background-color: rgba(4498,3487,9976,0.5);
+        height: 100%;
+        width: 100%;
+        background-image: url('../public/images/study.jpg');
+    //opacity: 0.5;
+        background-repeat: no-repeat;
+        background-size:     cover;
+        background-position: center center;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+    }
+    .forget-password-css{
+        color: black;
+    }
+
+</style>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="container main-outer">
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="container-fliud">
+        <div class="navbar-header">
+            <!-- <button type="button" class="narbar-toggle collapsed" data-toggle="collapse" data-target="example1-navbar-collapse-1">
+                <span class="sr-only">Toggle naviagtion</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button> -->
+            <a class="navbar-brand" href="#">Welcome to Tutor Connect</a>
         </div>
-    </nav>
 
-    <div class="jumbotron text-center" style="background-color: #ffffff;
-  color: #000000;">
-        <h1>Tutor Connect</h1>
-        <p></p>
+        <div class="collapse navbar-collapse" id="examples1-navbar-collapse-2">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Home Page</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find Tutors<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="userpage.html">Make a Post</a></li>
+                        <li><a href="tutorfile.html">Search Tutors</a></li>
+                        <li><a href="#">More</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="signup.html">Sign Up</a>
+                </li>
+                <li>
+                    <a href="login.html">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="homePage" data-spy="scroll" data-target=".navbar" data-offset="60" style="opacity: 0.8;" >
+    <div class="jumbotron text-center" style="background-color: #ffffff; color: #000000;">
+        <h1>Get Help From Talent</h1>
 
         <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
             <!-- Indicators -->
@@ -96,10 +148,51 @@
             </a>
         </div>
     </div>
-</head>
-</body>
-</html>
+</div>
 
+
+<div class="col-sm-3">
+    <div class="thumbnail">
+        <p>Math</p>
+        <img src="../public/images/david.png" alt="David" width="400" height="300">
+        <p><strong>David</strong></p>
+        <p>Waterloo</p>Ratings:<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+        <button class="btn btn-primary">More Info</button>
+    </div>
+</div>
+
+<div class="col-sm-3">
+    <div class="thumbnail">
+        <p>English</p>
+        <img src="../public/images/sera.png" alt="Sera" width="400" height="300">
+        <p><strong>Sera</strong></p>
+        <p>Toronto</p>Ratings:<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+        <button class="btn btn-primary">More Info</button>
+    </div>
+</div>
+
+<div class="col-sm-3">
+    <div class="thumbnail">
+        <p>Physics</p>
+        <img src="../public/images/john.png" alt="John" width="400" height="300">
+        <p><strong>John</strong></p>
+        <p>Kitchener</p>Ratings:<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+        <button class="btn btn-primary">More Info</button>
+    </div>
+</div>
+
+<div class="col-sm-3">
+    <div class="thumbnail">
+        <p>Physics</p>
+        <img src="../public/images/yumi.png" alt="John" width="400" height="300">
+        <p><strong>Yumi</strong></p>
+        <p>Waterloo</p>Ratings:<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></p>
+        <button class="btn btn-primary">More Info</button>
+    </div>
+</div>
+
+</div>
+</html>
 
 
 
