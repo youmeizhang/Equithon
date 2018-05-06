@@ -60,12 +60,26 @@
                     {{ form.remember_me(id="remember_me", type="checkbox", value="remember-me") }} Remember Me
                 </label>
             </div>
-            {{ form.submit(class="btn btn-lg btn-primary btn-block btn-signin", type="submit", role="button") }}
+            {{ form.submit(class="btn btn-lg btn-primary btn-block btn-signin", onclick="check(this.form)",type="submit", role="button") }}
         </form>
         <p></p>
         <a href="#" class="forget-password forget-password-css">Forgot the password?</a>
     </div>
 </div>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.email.value == "123456@equithon" && form.password.value == "123456")
+  {
+    window.open('index.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
 </body>
 </html>
 {% endblock %}
