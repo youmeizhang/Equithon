@@ -28,7 +28,7 @@
         //background-color: rgba(4498,3487,9976,0.5);
         height: 100%;
         width: 100%;
-        background-image: url('/static/images/background2.jpg');
+        background-image: url('/static/images/study.jpg');
         //opacity: 0.5;
         background-repeat: no-repeat;
         background-size:     cover;
@@ -55,7 +55,7 @@
             <div class="main-login main-center">
                 <form class="form-horizontal" method="POST" action="" style="width:80%; margin: auto;">
                     <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Your School</label>
+                        <label for="name" class="cols-sm-2 control-label">School</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"></span>
@@ -64,6 +64,7 @@
                         </div>
                     </div>
                      <div class="form-group">
+                       <div style="width: 45%; float: left;">
                         <label for="name" class="cols-sm-2 control-label">Grade</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
@@ -71,9 +72,8 @@
                                 <input type="text" class="form-control" id="school" placeholder="Enter your current school (optional)")/>
                             </div>
                         </div>
-                    </div>
-
-                     <div class="form-group">
+                       </div>
+                       <div style="width:45%; float: right;">
                         <label for="name" class="cols-sm-2 control-label">Age</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
@@ -81,6 +81,7 @@
                                 <input type="text" class="form-control" id="school" placeholder="Enter your current school (optional)")/>
                             </div>
                         </div>
+                       </div>
                     </div>
 
                     <div class="form-group">
@@ -106,26 +107,89 @@
                      <div class="form-group">
                         <label for="name" class="cols-sm-2 control-label">Subjects</label>
                         <div class="cols-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" id="school" placeholder="Enter your current school (optional)")/>
+                            <div class="input-group" style="width: 45%; float:left; ">
+                              <div>
+                                <input type="checkbox" id="coding" name="interest" value="english">
+                                <label for="coding" style="font-weight: normal;">English</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="music" name="interest" value="maths">
+                                <label for="music" style="font-weight: normal;">Maths</label>
+                              </div>
+                               <div>
+                                <input type="checkbox" id="coding" name="interest" value="physics">
+                                <label for="coding" style="font-weight: normal;">Physics</label>
+                              </div>
+
+                              </div>
+                              <div class = "input-group" style="width:45%; float: right;">
+                              <div>
+                                <input type="checkbox" id="music" name="interest" value="chemistry">
+                                <label for="music" style="font-weight: normal;">Chemistry</label>
+                              </div>
+                                 <div>
+                                <input type="checkbox" id="music" name="interest" value="biology">
+                                <label for="music" style="font-weight: normal;">Biology</label>
+                              </div>
+                                 <div>
+                                <input type="checkbox" id="music" name="interest" value="french">
+                                <label for="music" style="font-weight: normal;">French</label>
+                              </div>
                             </div>
                         </div>
                     </div>
 
-                    <--available days------>
-                    <--thinking of doing a format with checkboxes instead of a text field?-->
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Available Days</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group" style="width:45%; float: left;">
+                              <div>
+                                <input type="checkbox" id="coding" name="interest" value="monday">
+                                <label for="coding" style="font-weight: normal;">Monday</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="music" name="interest" value="tuesday">
+                                <label for="music" style="font-weight: normal;">Tuesday</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="coding" name="interest" value="wednesday">
+                                <label for="coding" style="font-weight: normal;">Wednesday</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="music" name="interest" value="thursday">
+                                <label for="music" style="font-weight: normal;">Thursday</label>
+                              </div>
+
+
+                            </div>
+                            <div class="input-group" style="width: 45%; float: right;">
+
+                              <div>
+                                <input type="checkbox" id="music" name="interest" value="friday">
+                                <label for="music" style="font-weight: normal;">Friday</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="music" name="interest" value="saturday">
+                                <label for="music" style="font-weight: normal;">Saturday</label>
+                              </div>
+                              <div>
+                                <input type="checkbox" id="music" name="interest" value="sunday">
+                                <label for="music" style="font-weight: normal;">Sunday</label>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
 
                      <div class="form-group">
                         <label for="name" class="cols-sm-2 control-label">About You</label>
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"></span>
-                                <input type="text" class="form-control" id="school" placeholder="Enter your current school (optional)")/>
+                                <input type="text" class="form-control" id="school" placeholder="Additional Information")/>
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-lg btn-primary btn-block btn-signin", type="submit", role="button" />
+                    <button class="btn btn-lg btn-primary btn-block btn-signin", type="submit", role="button" >Submit</button>
 
                 </form>
             </div>
