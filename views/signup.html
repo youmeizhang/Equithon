@@ -58,7 +58,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name"/>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required/>
                             </div>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                <input type="email" class="form-control" name="name" id="name" placeholder="Enter your email"/>
+                                <input type="email" class="form-control" name="name" id="name" placeholder="Enter your email" required/>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-university fa" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your school"/>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your school" required/>
                             </div>
                         </div>
                     </div>
@@ -89,17 +89,25 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-university fa" aria-hidden="true"></i></span>
-                                <input type="number" class="form-control" name="name" id="name" placeholder="Enter your school"/>
+                                <input type="number" class="form-control" name="name" id="name" placeholder="Enter your school" required autofocus />
                             </div>
                         </div>
                     </div>
 
-                    <button class="btn btn-lg btn-primary btn-block btn-signin btn-css" type="submit">Sign Up</button>
+                    <button class="btn btn-lg btn-primary btn-block btn-signin btn-css" type= "submit" onclick="return mySignUp()">Sign Up</button>
                 </form>
             </div>
 
         </div>
     </div>
+
+<script>
+    function mySignUp(){
+        window.location.href = "login.html";
+        return false;
+    }
+
+</script>
 </body>
 </html>
 
