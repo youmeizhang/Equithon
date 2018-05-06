@@ -19,7 +19,7 @@ class SignupForm(FlaskForm):
 
 class ProfileForm(FlaskForm):
         school = StringField('School', validators=[DataRequired()])
-        grade = StringField('Grade', validators=[DataRequired()])
+        grade = StringField('Grade')
         age = IntegerField('Age', validators=[DataRequired()])
         phone = IntegerField('Phone Number (optional)')
         address = StringField('Address (optional)')

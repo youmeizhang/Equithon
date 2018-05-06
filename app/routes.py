@@ -56,3 +56,8 @@ def profile():
 def userpage():
     return render_template('userpage.html')
 
+
+@app.route('/tutorfile')
+def tutorfile():
+    return render_template('tutorfile.html')
+
