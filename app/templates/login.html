@@ -102,7 +102,11 @@
                     {{ form.remember_me(id="remember_me", type="checkbox", value="remember-me") }} Remember Me
                 </label>
             </div>
+<<<<<<< HEAD
             {{ form.submit(class="btn btn-lg btn-primary btn-block btn-signin", type="submit", role="button", onclick="return check(this.form)") }}
+=======
+            {{ form.submit(class="btn btn-lg btn-primary btn-block btn-signin", onclick="check(this.form)",type="submit", role="button") }}
+>>>>>>> 2120dfd1513b954fb32a98bddaa7034b4fcae84e
         </form>
         <script language="javascript">
             function check(form)
@@ -123,5 +127,23 @@
         <a href="#" class="forget-password forget-password-css">Forgot the password?</a>
     </div>
 </div>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.email.value == "123456@equithon" && form.password.value == "123456")
+  {
+    window.open('index.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
 </body>
 </html>
+<<<<<<< HEAD
+=======
+{% endblock %}
+>>>>>>> 2120dfd1513b954fb32a98bddaa7034b4fcae84e
