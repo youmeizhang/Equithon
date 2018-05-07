@@ -54,7 +54,7 @@
         <div class="collapse navbar-collapse" id="examples1-navbar-collapse-2">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="#">Home Page</a></li>
+                    <a href="/index">Home Page</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find Tutors<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -102,8 +102,23 @@
                     {{ form.remember_me(id="remember_me", type="checkbox", value="remember-me") }} Remember Me
                 </label>
             </div>
-            {{ form.submit(class="btn btn-lg btn-primary btn-block btn-signin", type="submit", role="button") }}
+            {{ form.submit(class="btn btn-lg btn-primary btn-block btn-signin", type="submit", role="button", onclick="return check(this.form)") }}
         </form>
+        <script language="javascript">
+            function check(form)
+            {
+                if(form.email.value=='123456@equithon.com'&&form.password.value=='123456')
+                {
+
+                }
+                else
+                {
+                    alert('Wrong email or password')
+                    return false
+                    //window.open('/login')
+                }
+            }
+        </script>
         <p></p>
         <a href="#" class="forget-password forget-password-css">Forgot the password?</a>
     </div>
